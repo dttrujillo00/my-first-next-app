@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar"
+import { Roboto } from 'next/font/google'
 
 // Revisar documentacion: Nextjs metadata
 export const metadata = {
@@ -7,10 +8,16 @@ export const metadata = {
   keywords: "tienda, online, ecommerce",
 }
 
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700"],
+  style: ["italic", "normal"],
+  subsets: ["latin"],
+})
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={roboto.className}>
         <Navbar />
         {children}
       </body>
