@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from "next/link"
+import './Navbar.css'
 
 const Navbar = () => {
     return (
-        <nav>
+        <nav className='navbar'>
             <h1>Navegacion</h1>
 
             <ul>
